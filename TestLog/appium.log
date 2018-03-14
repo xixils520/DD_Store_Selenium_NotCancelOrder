@@ -1,0 +1,600 @@
+Tried to attach logging to file D:\workspace\Normal_DD_Selenium\TestLog\appium.log but an error occurred: undefined
+[36minfo[39m: Welcome to Appium v1.4.16 (REV ae6877eff263066b26328d457bd285c0cc62430d)
+[36minfo[39m: Appium REST http interface listener started on 127.0.0.1:4723
+[36minfo[39m: [debug] Non-default server args: {"udid":"de19c676","address":"127.0.0.1","bootstrapPort":2000,"noReset":true,"log":"D:\\workspace\\Normal_DD_Selenium\\TestLog\\appium.log"}
+[36minfo[39m: Console LogLevel: debug
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m [90m{"capabilities":{"alwaysMatch":{"platformName":"Android"},"firstMatch":[{}]},"desiredCapabilities":{"platformVersion":"7.0","deviceName":"de19c676","platformName":"Android","appActivity":"com.ddinfo.flwarehouse.activity.login.LaunchActivity","appPackage":"com.ddinfo.flwarehouse"}}[39m
+[36minfo[39m: Client User-Agent string: Python http auth
+[36minfo[39m: [debug] Didn't get app but did get Android package, will attempt to launch it on the device
+[36minfo[39m: [debug] Creating new appium session 7e47e482-b640-4f17-88d7-0faf02890e68
+[36minfo[39m: Starting android appium
+[36minfo[39m: [debug] Getting Java version
+[36minfo[39m: Java version is: 1.8.0_144
+[36minfo[39m: [debug] Checking whether adb is present
+[36minfo[39m: [debug] Using adb from C:\sdk\platform-tools\adb.exe
+[33mwarn[39m: No app capability, can't parse package/activity
+[36minfo[39m: [debug] Using fast reset? false
+[36minfo[39m: [debug] Preparing device for session
+[36minfo[39m: [debug] Not checking whether app is present since we are assuming it's already on the device
+[36minfo[39m: Retrieving device
+[36minfo[39m: [debug] Trying to find a connected android device
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe devices
+[36minfo[39m: [debug] 1 device(s) connected
+[36minfo[39m: Found device de19c676
+[36minfo[39m: [debug] Setting device id to de19c676
+[36minfo[39m: [debug] Waiting for device to be ready and to respond to shell commands (timeout = 5)
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 wait-for-device
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 shell "echo 'ready'"
+[36minfo[39m: [debug] Starting logcat capture
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 23
+[36minfo[39m: Device API level is: 23
+[36minfo[39m: [debug] Extracting strings for language: default
+[36minfo[39m: [debug] Apk doesn't exist locally
+[36minfo[39m: [debug] Could not get strings, but it looks like we had an old strings file anyway, so ignoring
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 shell "rm -rf /data/local/tmp/strings.json"
+[36minfo[39m: [debug] Not uninstalling app since server not started with --full-reset
+[36minfo[39m: [debug] Skipping install since we launched with a package instead of an app path
+[36minfo[39m: [debug] Forwarding system:2000 to device:4724
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 forward tcp:2000 tcp:4724
+[36minfo[39m: [debug] Pushing appium bootstrap to device...
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 push "C:\\Program Files (x86)\\Appium\\node_modules\\appium\\build\\android_bootstrap\\AppiumBootstrap.jar" /data/local/tmp/
+[36minfo[39m: Starting App
+[36minfo[39m: [debug] Attempting to kill all 'uiautomator' processes
+[36minfo[39m: [debug] Getting all processes with 'uiautomator'
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 shell "ps 'uiautomator'"
+[36minfo[39m: [debug] No matching processes found
+[36minfo[39m: [debug] Running bootstrap
+[36minfo[39m: [debug] spawning: C:\sdk\platform-tools\adb.exe -s de19c676 shell uiautomator runtest AppiumBootstrap.jar -c io.appium.android.bootstrap.Bootstrap -e pkg com.ddinfo.flwarehouse -e disableAndroidWatchers false
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] io.appium.android.bootstrap.Bootstrap:[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 1[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Socket opened on port 4724
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Appium Socket Server Ready
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Loading json...
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Registered crash watchers.
+[36minfo[39m: [debug] Waking up device if it's not alive
+[36minfo[39m: [debug] Pushing command to appium work queue: ["wake",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Client connected
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"wake","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: wake
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["getDataDir",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"getDataDir","params":{}}
+[36minfo[39m: [debug] dataDir set to: /data/local/tmp
+[36minfo[39m: [debug] Pushing command to appium work queue: ["compressedLayoutHierarchy",{"compressLayout":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getDataDir
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"\/data\/local\/tmp"}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"compressedLayoutHierarchy","params":{"compressLayout":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: compressedLayoutHierarchy
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":false}
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 23
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.ddinfo.flwarehouse/com.ddinfo.flwarehouse.activity.login.LaunchActivity"
+[36minfo[39m: [debug] Waiting for pkg "com.ddinfo.flwarehouse" and activity "com.ddinfo.flwarehouse.activity.login.LaunchActivity" to be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 shell "dumpsys window windows"
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 shell "getprop ro.build.version.release"
+[36minfo[39m: [debug] Device is at release version 6.0.1
+[36minfo[39m: [debug] Device launched! Ready for commands
+[36minfo[39m: [debug] Setting command timeout to the default of 60 secs
+[36minfo[39m: [debug] Appium session started with sessionId 7e47e482-b640-4f17-88d7-0faf02890e68
+[36minfo[39m: [37m<-- POST /wd/hub/session [39m[36m303[39m[90m 3702.347 ms - 74[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68[39m [90m{}[39m
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"6.0.1","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformVersion":"7.0","deviceName":"de19c676","platformName":"Android","appActivity":"com.ddinfo.flwarehouse.activity.login.LaunchActivity","appPackage":"com.ddinfo.flwarehouse"},"deviceName":"de19c676","platformName":"Android","appActivity":"com.ddinfo.flwarehouse.activity.login.LaunchActivity","appPackage":"com.ddinfo.flwarehouse"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68 [39m[32m200[39m[90m 5.038 ms - 665[39m [90m{"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"6.0.1","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformVersion":"7.0","deviceName":"de19c676","platformName":"Android","appActivity":"com.ddinfo.flwarehouse.activity.login.LaunchActivity","appPackage":"com.ddinfo.flwarehouse"},"deviceName":"de19c676","platformName":"Android","appActivity":"com.ddinfo.flwarehouse.activity.login.LaunchActivity","appPackage":"com.ddinfo.flwarehouse"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/timeouts/implicit_wait[39m [90m{"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","ms":5000}[39m
+[36minfo[39m: [debug] Set Android implicit wait to 5000ms
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/timeouts/implicit_wait [39m[32m200[39m[90m 3.265 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"id","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"com.ddinfo.flwarehouse:id/searchEditText"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/searchEditText","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/searchEditText","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/searchEditText using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/searchEditText]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"1"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"1"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 90.478 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"1"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/1/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"1","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"1","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/1/displayed [39m[32m200[39m[90m 24.770 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"id","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"com.ddinfo.flwarehouse:id/searchEditText"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/searchEditText","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/searchEditText","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/searchEditText using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/searchEditText]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"2"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"2"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 43.558 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"2"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"id","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"com.ddinfo.flwarehouse:id/searchEditText"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/searchEditText","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/searchEditText","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/searchEditText using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/searchEditText]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"3"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 106.485 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"3"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"3"}}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/3/value[39m [90m{"text":"11115427","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","id":"3","value":["1","1","1","1","5","4","2","7"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"3","text":"11115427","replace":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"3","text":"11115427","replace":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text remains after clearing, but it appears to be hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text not cleared. Assuming remainder is hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: 11115427
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/3/value [39m[32m200[39m[90m 6096.472 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/appium/device/keyevent[39m [90m{"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","keycode":66}[39m
+[33mwarn[39m: [DEPRECATED] The keyevent function has been deprecated and will be removed.  Please use the pressKeyCode function instead.
+[36minfo[39m: [debug] Pushing command to appium work queue: ["pressKeyCode",{"keycode":66,"metastate":null}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"pressKeyCode","params":{"keycode":66,"metastate":null}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: pressKeyCode
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/appium/device/keyevent [39m[32m200[39m[90m 72.577 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/timeouts/implicit_wait[39m [90m{"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","ms":5000}[39m
+[36minfo[39m: [debug] Set Android implicit wait to 5000ms
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/timeouts/implicit_wait [39m[32m200[39m[90m 1.154 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"id","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"com.ddinfo.flwarehouse:id/tv_option_two"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_two","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_two","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/tv_option_two using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/tv_option_two]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"4"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 34.266 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"4"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"4"}}
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/4/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"4","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"4","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/4/displayed [39m[32m200[39m[90m 114.336 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"id","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"com.ddinfo.flwarehouse:id/tv_option_two"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_two","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_two","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/tv_option_two using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/tv_option_two]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"5"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"5"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 46.427 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"5"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"id","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"com.ddinfo.flwarehouse:id/tv_option_two"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_two","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_two","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/tv_option_two using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/tv_option_two]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"6"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 30.832 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"6"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"6"}}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/6/click[39m [90m{"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","id":"6"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"6"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"6"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/6/click [39m[32m200[39m[90m 162.420 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/timeouts/implicit_wait[39m [90m{"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","ms":5000}[39m
+[36minfo[39m: [debug] Set Android implicit wait to 5000ms
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/timeouts/implicit_wait [39m[32m200[39m[90m 1.211 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"name","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"待交接"}[39m
+[33mwarn[39m: [DEPRECATED] The name locator strategy has been deprecated and will be removed.  Please use the accessibility id locator strategy instead.
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"待交接","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"待交接","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 待交接 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=待交接, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=待交接, INSTANCE=0]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"7"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 75.280 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"7"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"7"}}
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/7/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"7","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"7","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/7/displayed [39m[32m200[39m[90m 80.613 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"name","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"待交接"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"待交接","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"待交接","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 待交接 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=待交接, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=待交接, INSTANCE=0]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"8"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 128.925 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"8"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"8"}}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"name","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"待交接"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"待交接","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"待交接","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 待交接 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=待交接, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=待交接, INSTANCE=0]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"9"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 145.698 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"9"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"9"}}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/9/click[39m [90m{"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","id":"9"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"9"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"9"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/9/click [39m[32m200[39m[90m 405.189 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/timeouts/implicit_wait[39m [90m{"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","ms":5000}[39m
+[36minfo[39m: [debug] Set Android implicit wait to 5000ms
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/timeouts/implicit_wait [39m[32m200[39m[90m 1.952 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"id","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"com.ddinfo.flwarehouse:id/searchEditText"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/searchEditText","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/searchEditText","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/searchEditText using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/searchEditText]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"10"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 75.097 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"10"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"10"}}
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/10/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"10","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"10","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/10/displayed [39m[32m200[39m[90m 59.222 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"id","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"com.ddinfo.flwarehouse:id/searchEditText"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/searchEditText","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/searchEditText","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/searchEditText using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/searchEditText]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"11"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"11"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 188.897 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"11"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"id","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"com.ddinfo.flwarehouse:id/searchEditText"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/searchEditText","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/searchEditText","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/searchEditText using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/searchEditText]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"12"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"12"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 80.913 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"12"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/12/value[39m [90m{"text":"11115427","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","id":"12","value":["1","1","1","1","5","4","2","7"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"12","text":"11115427","replace":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"12","text":"11115427","replace":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text remains after clearing, but it appears to be hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text not cleared. Assuming remainder is hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: 11115427
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/12/value [39m[32m200[39m[90m 5424.849 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/appium/device/keyevent[39m [90m{"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","keycode":66}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["pressKeyCode",{"keycode":66,"metastate":null}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"pressKeyCode","params":{"keycode":66,"metastate":null}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: pressKeyCode
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/appium/device/keyevent [39m[32m200[39m[90m 93.417 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/timeouts/implicit_wait[39m [90m{"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","ms":5000}[39m
+[36minfo[39m: [debug] Set Android implicit wait to 5000ms
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/timeouts/implicit_wait [39m[32m200[39m[90m 1.254 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"id","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"com.ddinfo.flwarehouse:id/tv_option_one"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/tv_option_one using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/tv_option_one]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"13"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 35.552 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"13"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"13"}}
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/13/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"13","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"13","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/13/displayed [39m[32m200[39m[90m 145.800 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"id","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"com.ddinfo.flwarehouse:id/tv_option_one"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/tv_option_one using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/tv_option_one]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"14"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 42.598 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"14"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"14"}}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element[39m [90m{"using":"id","sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","value":"com.ddinfo.flwarehouse:id/tv_option_one"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/tv_option_one using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/tv_option_one]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"15"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"15"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element [39m[32m200[39m[90m 183.210 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"15"},"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/15/click[39m [90m{"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68","id":"15"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"15"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"15"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7e47e482-b640-4f17-88d7-0faf02890e68/element/15/click [39m[32m200[39m[90m 211.848 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7e47e482-b640-4f17-88d7-0faf02890e68"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+
+D:\workspace\Normal_DD_Selenium\MainRun>ibute",{"elementId":"13","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"13","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"667104e0-5dc9-464b-a45f-8a03cc20aa8c"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/667104e0-5dc9-464b-a45f-8a03cc20aa8c/element/13/displayed [39m[32m200[39m[90m 194.583 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"667104e0-5dc9-464b-a45f-8a03cc20aa8c"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/667104e0-5dc9-464b-a45f-8a03cc20aa8c/element[39m [90m{"using":"id","sessionId":"667104e0-5dc9-464b-a45f-8a03cc20aa8c","value":"com.ddinfo.flwarehouse:id/tv_option_one"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/tv_option_one using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/tv_option_one]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"14"},"sessionId":"667104e0-5dc9-464b-a45f-8a03cc20aa8c"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/667104e0-5dc9-464b-a45f-8a03cc20aa8c/element [39m[32m200[39m[90m 134.263 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"14"},"sessionId":"667104e0-5dc9-464b-a45f-8a03cc20aa8c"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"14"}}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/667104e0-5dc9-464b-a45f-8a03cc20aa8c/element[39m [90m{"using":"id","sessionId":"667104e0-5dc9-464b-a45f-8a03cc20aa8c","value":"com.ddinfo.flwarehouse:id/tv_option_one"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/tv_option_one using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/tv_option_one]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"15"},"sessionId":"667104e0-5dc9-464b-a45f-8a03cc20aa8c"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/667104e0-5dc9-464b-a45f-8a03cc20aa8c/element [39m[32m200[39m[90m 223.949 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"15"},"sessionId":"667104e0-5dc9-464b-a45f-8a03cc20aa8c"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"15"}}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/667104e0-5dc9-464b-a45f-8a03cc20aa8c/element/15/click[39m [90m{"sessionId":"667104e0-5dc9-464b-a45f-8a03cc20aa8c","id":"15"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"15"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"15"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"667104e0-5dc9-464b-a45f-8a03cc20aa8c"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/667104e0-5dc9-464b-a45f-8a03cc20aa8c/element/15/click [39m[32m200[39m[90m 395.989 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"667104e0-5dc9-464b-a45f-8a03cc20aa8c"}[39m
+
+D:\workspace\Normal_DD_Selenium\MainRun>: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 0[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] Test results for WatcherResultPrinter=.[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] Time: 54.54[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] OK (1 test)[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: -1[39m
+[36minfo[39m: [debug] UiAutomator shut down normally
+[36minfo[39m: [debug] Cleaning up android objects
+[36minfo[39m: [debug] Cleaning up appium session
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"1ce039ab-210f-4b7b-b22e-341373d9c31d"}
+[36minfo[39m: [37m<-- DELETE /wd/hub/session/1ce039ab-210f-4b7b-b22e-341373d9c31d [39m[32m200[39m[90m 1260.358 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"1ce039ab-210f-4b7b-b22e-341373d9c31d"}[39m
+
+D:\workspace\Normal_DD_Selenium\MainRun>/wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element[39m [90m{"using":"name","sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba","value":"待交接"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"待交接","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"待交接","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 待交接 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=待交接, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=待交接, INSTANCE=0]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"12"},"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element [39m[32m200[39m[90m 84.861 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"12"},"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"12"}}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element/12/click[39m [90m{"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba","id":"12"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"12"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"12"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element/12/click [39m[32m200[39m[90m 445.157 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/timeouts/implicit_wait[39m [90m{"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba","ms":5000}[39m
+[36minfo[39m: [debug] Set Android implicit wait to 5000ms
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/timeouts/implicit_wait [39m[32m200[39m[90m 0.900 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element[39m [90m{"using":"id","sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba","value":"com.ddinfo.flwarehouse:id/tv_option_one"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/tv_option_one using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/tv_option_one]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"13"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"13"},"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element [39m[32m200[39m[90m 184.293 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"13"},"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element/13/displayed[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:getAttribute",{"elementId":"13","attribute":"displayed"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"elementId":"13","attribute":"displayed"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getAttribute
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element/13/displayed [39m[32m200[39m[90m 122.400 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"true"}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element[39m [90m{"using":"id","sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba","value":"com.ddinfo.flwarehouse:id/tv_option_one"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/tv_option_one using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/tv_option_one]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"14"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"14"},"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element [39m[32m200[39m[90m 81.989 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"14"},"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element[39m [90m{"using":"id","sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba","value":"com.ddinfo.flwarehouse:id/tv_option_one"}[39m
+[36minfo[39m: [debug] Waiting up to 5000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.flwarehouse:id/tv_option_one","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.flwarehouse:id/tv_option_one using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.flwarehouse:id/tv_option_one]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"15"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"15"},"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element [39m[32m200[39m[90m 39.079 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"15"},"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element/15/click[39m [90m{"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba","id":"15"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"15"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"15"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba/element/15/click [39m[32m200[39m[90m 474.665 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}[39m
+[36minfo[39m: [37m-->[39m [37mDELETE[39m [37m/wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba[39m [90m{}[39m
+[36minfo[39m: Shutting down appium session
+[36minfo[39m: [debug] Pressing the HOME button
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 shell "input keyevent 3"
+[36minfo[39m: [debug] Stopping logcat capture
+[36minfo[39m: [debug] Logcat terminated with code null, signal SIGTERM
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"shutdown"}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type SHUTDOWN
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"OK, shutting down"}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Closed client connection
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=.[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 0[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] Test results for WatcherResultPrinter=.[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] Time: 62.344[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] OK (1 test)[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: -1[39m
+[36minfo[39m: [debug] Sent shutdown command, waiting for UiAutomator to stop...
+[36minfo[39m: [debug] UiAutomator shut down normally
+[36minfo[39m: [debug] Cleaning up android objects
+[36minfo[39m: [debug] Cleaning up appium session
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}
+[36minfo[39m: [37m<-- DELETE /wd/hub/session/7649eb1e-2c94-4110-ab46-5ed42bfed3ba [39m[32m200[39m[90m 1276.540 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"7649eb1e-2c94-4110-ab46-5ed42bfed3ba"}[39m
+
+D:\workspace\Normal_DD_Selenium\MainRun>"using":"id","sessionId":"79539058-2cf3-48ee-90b9-23f373f64fc2","value":"com.ddinfo.ddmall:id/et_user_name_login"}[39m
+[36minfo[39m: [debug] Waiting up to 0ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.ddinfo.ddmall:id/et_user_name_login","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.ddinfo.ddmall:id/et_user_name_login","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.ddinfo.ddmall:id/et_user_name_login using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.ddinfo.ddmall:id/et_user_name_login]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"1"}}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"1"},"sessionId":"79539058-2cf3-48ee-90b9-23f373f64fc2"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/79539058-2cf3-48ee-90b9-23f373f64fc2/element [39m[32m200[39m[90m 22.764 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"1"},"sessionId":"79539058-2cf3-48ee-90b9-23f373f64fc2"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/79539058-2cf3-48ee-90b9-23f373f64fc2/element/1/value[39m [90m{"text":"11111111","sessionId":"79539058-2cf3-48ee-90b9-23f373f64fc2","id":"1","value":["1","1","1","1","1","1","1","1"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"1","text":"11111111","replace":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"1","text":"11111111","replace":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text not cleared. Assuming remainder is hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: 11111111
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":13,"value":"Unknown error"}
+[36minfo[39m: [debug] Responding to client with error: {"status":13,"value":{"message":"An unknown server-side error occurred while processing the command.","origValue":"Unknown error"},"sessionId":"79539058-2cf3-48ee-90b9-23f373f64fc2"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/79539058-2cf3-48ee-90b9-23f373f64fc2/element/1/value [39m[31m500[39m[90m 182.296 ms - 182[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mDELETE[39m [37m/wd/hub/session/79539058-2cf3-48ee-90b9-23f373f64fc2[39m [90m{}[39m
+[36minfo[39m: Shutting down appium session
+[36minfo[39m: [debug] Pressing the HOME button
+[36minfo[39m: [debug] executing cmd: C:\sdk\platform-tools\adb.exe -s de19c676 shell "input keyevent 3"
+[36minfo[39m: [debug] Stopping logcat capture
+[36minfo[39m: [debug] Logcat terminated with code null, signal SIGTERM
+[36minfo[39m: [debug] Sent shutdown command, waiting for UiAutomator to stop...
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"shutdown"}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type SHUTDOWN
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"OK, shutting down"}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Closed client connection
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=.[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 0[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] Test results for WatcherResultPrinter=.[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] Time: 13.085[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] OK (1 test)[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: -1[39m
+[36minfo[39m: [debug] UiAutomator shut down normally
+[36minfo[39m: [debug] Cleaning up android objects
+[36minfo[39m: [debug] Cleaning up appium session
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"79539058-2cf3-48ee-90b9-23f373f64fc2"}
+[36minfo[39m: [37m<-- DELETE /wd/hub/session/79539058-2cf3-48ee-90b9-23f373f64fc2 [39m[32m200[39m[90m 1042.458 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"79539058-2cf3-48ee-90b9-23f373f64fc2"}[39m
+
+D:\workspace\Normal_DD_Selenium\Public>

@@ -1,0 +1,51 @@
+{"Activity":
+    [
+      {
+        "mainActivity": {
+          "goodId": 125767,
+          "price": 7},
+        "Description": "未参与活动"
+      },
+      {
+        "zengDouActivity":{
+          "goodId":125801,
+          "price":80,
+          "zeng_price":4
+        },
+        "Description":"赠豆4元"
+      },
+      {
+        "manJianActivity":{
+          "goodId":125802,
+          "price":100,
+          "jian_price":10,
+          "base_price":50
+        },
+        "Description":"满50减10"
+      },
+      {
+        "manZengActivity":{
+          "goodId":125804,
+          "price":150,
+          "zeng_goodId":125805,
+          "zeng_count":1
+        },
+        "Description":"赠125805物品一个"
+      },
+      {
+        "heikaActivity":{
+          "goodId":125811,
+          "price":100
+        },
+        "Description":"黑卡活动，除了赠豆不享受其他优惠"
+      },
+      {
+        "weihuoActivity":{
+          "goodId":125822,
+          "price":30,
+          "pre_price":60
+        },
+        "Description":"尾货闪销,价格减为30"
+      }
+    ]
+}

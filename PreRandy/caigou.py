@@ -1,0 +1,145 @@
+#coding:utf-8
+import requests
+import time
+import json
+server_url='http://192.168.1.248:31100'
+url_username='12345678910'
+url_password='123456'
+
+invent_url='http://192.168.1.251:48000'
+
+
+import MySQLdb
+from warnings import filterwarnings
+filterwarnings('ignore', category = MySQLdb.Warning)
+test_db_ip = '192.168.1.101'
+test_user = 'dddev'
+test_passwd = '123456'
+test_mainDb='ctcdb_new_test'
+test_ckDb='ctcdb_ck_test'
+conn_test = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306,charset="utf8")
+
+def changeIntoStr(data,str_data=''):
+    if isinstance(data, str):
+        str_data = data.encode('utf-8')
+    elif isinstance(data, str):
+        str_data = data
+    return str_data
+
+def ruku(orderId):
+    # 登录
+    newsession=requests.Session()
+    login_url = '{0}/users/login'.format(invent_url)
+    login_data = {'userName': url_username, 'password': url_password}
+    newsession.post(url=login_url, data=login_data)
+    zdh_url = '{0}/users/updateAgency'.format(invent_url)
+    zdh_data = {'cityId':320100,'agencyId':101}
+    newsession.post(url=zdh_url, data=zdh_data)
+    #入库
+    cur = conn_test.cursor()
+    conn_test.select_db(test_ckDb)
+    cur.execute("select identificationCode,id from check_up_orders WHERE numberId='{0}' order by id desc limit 1".format(orderId))
+    info = cur.fetchone()
+    identificationCode=info[0]
+    print(identificationCode)
+    cur.execute("select id,shouldReceive,GoodId,height,layerNumber from check_up_order_details WHERE identificationCode='{0}' and state='0' limit 1".format(identificationCode))
+    info = cur.fetchone()
+    _id=info[0]
+    shouldReceive=info[1]
+    GoodId=info[2]
+    height=info[3]
+    layerNumber=info[4]
+    cur.close()
+    scan_url='{0}/api/storageIn/scanReceipt/query?orderId={1}'.format(invent_url,orderId)
+    newsession.get(url=scan_url)
+    ruku_url='{0}/api/storageIn/checkup/add'.format(invent_url)
+    ruku_data={"receiver":{"id":28,"workId":"njs001","name":"哈哈哈"},
+               "identificationCode":identificationCode,
+               "checkUp":[{"id":_id,"count":shouldReceive,"shouldCount":shouldReceive,"tabelNumber":"1","type":"bulk","goodId":GoodId,"checkupType":"true",
+                           "countByDate":[{"count":shouldReceive,"produceDate":time.strftime('%Y-%m-%d',time.localtime(time.time()))}],
+                           "stockWay":"100*100","layerNumber":layerNumber,"height":height,"proportion":1}],
+               "remark":""
+               }
+    newsession.post(url=ruku_url,data=json.dumps(ruku_data),headers={'Content-Type': 'application/json'})
+    tokenRuku_url='{0}/api/getToken?numberId={1}&key=YS'.format(invent_url,orderId)
+    tokenRuku_response=newsession.get(url=tokenRuku_url)
+    tokenRuku_json=json.loads(tokenRuku_response.text)
+    token=tokenRuku_json['token']
+    #审核入库
+    sureRuku_url='{0}/api/storageIn/checkup/confirm'.format(invent_url)
+    sureRuku_data={'orderId':orderId,'identificationCode':identificationCode,'token':token}
+    sureRuku_response=newsession.post(url=sureRuku_url,data=sureRuku_data)
+    sureRuku_json=json.loads(changeIntoStr(sureRuku_response.text))
+    print(sureRuku_json['message'])
+
+##采购
+def create_product(cityID,warehouseId,goodId,quantity):
+    # 登录
+    session=requests.Session()
+    headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36'}
+    login_url = '{0}/users/login'.format(server_url)
+    login_data = {'userName': url_username, 'password': url_password}
+    login_response = session.post(url=login_url, data=login_data, headers=headers)
+    # 切换城市
+    zdh_url = '{0}/users/updateAgency'.format(server_url)
+    zdh_data = {'cityId':320700,'agencyId':171}
+    zdh_response = session.post(url=zdh_url, data=zdh_data, headers=headers)
+    # print zdh_response.text
+    # 新增申购单
+
+    cur = conn_test.cursor()
+    conn_test.select_db(test_mainDb)
+    cur.execute("select cbp_price,cbp_provider_id from cg_base_prices WHERE cbp_city_id='{0}' and cbp_good_id='{1}'".format(cityID,goodId))
+    info1 = cur.fetchone()
+    if info1:
+        price=info1[0]
+        providerId=info1[1]
+    cur.close()
+    if info1:
+        addOrder_url='{0}/json/stockin/add'.format(server_url)
+        addOrder_data={'selectContract': '135', 'taxRate': '17', 'taxSum-show': '50000.0000', 'taxSum': '50000', 'warehouseId': warehouseId, 'purchaseOrigin': '1', 'selectType': '1', 'suggestNum': '0', 'copartnerId': '41', 'dailySold': '0', 'goodId': goodId, 'stockInType': 'normal', 'unitPrice': price, 'quantity': quantity}
+        # print addOrder_data
+        addOrder_response=session.post(url=addOrder_url,data=addOrder_data,headers=headers)
+        # print addOrder_response.text
+        time.sleep(2)
+        conn_test11 = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+        cur11 = conn_test11.cursor()
+        conn_test11.select_db(test_mainDb)
+        cur11.execute("select id from stock_in_orders WHERE state='0' and ProviderId='{0}' order by id desc limit 1 ".format(providerId))
+        info = cur11.fetchone()
+        orderId=info[0]
+        print(orderId)
+        cur11.close()
+        conn_test11.close()
+        orderCommit_url='{0}/json/stockin/commit'.format(server_url)
+        orderCommit_response=session.post(url=orderCommit_url,data={'id':orderId})
+        print(orderCommit_response.text)
+
+        shenHe_url='{0}/json/stockin/ag'.format(server_url)
+        shenHe_response=session.post(url=shenHe_url,data={'id':orderId,'message':''})
+        print(shenHe_response.text)
+
+        sureOrder_url='{0}/json/stockin/purchase'.format(server_url)
+        sureOrder_response=session.post(url=sureOrder_url,data={'id':orderId,'warehouseTime':time.strftime('%Y-%m-%d %H:%M',time.localtime(time.time()))})
+        print(sureOrder_response.text)
+    else:
+        print('商品未报价')
+def checkUsedGood(cityID,providerID):
+    print('\n可用商品库存编号以及价格如下\n')
+    cur = conn_test.cursor()
+    conn_test.select_db(test_mainDb)
+    info=cur.execute("select cbp_good_id,cbp_price from cg_base_prices WHERE cbp_city_id='{0}' and cbp_state='1' and cbp_provider_id='{1}'".format(cityID,providerID))
+    datas = cur.fetchmany(info)
+    sum_=0
+    if datas:
+        for data in datas:
+            if data[0] and data[1]:
+                print('库存编号为:',str(data[0]),'\t价格为:',str(data[1]))
+            sum_+=1
+            if sum_>=5:
+                break
+    cur.close()
+
+# checkUsedGood(320700,100716)
+create_product(320700,80,140279,'100')
+# ruku(260388)

@@ -1,0 +1,117 @@
+#coding:utf-8
+import requests
+import json
+import time
+import redis
+redis_db_ip='192.168.1.101'
+redis_port=6379
+def changeIntoStr(data,str_data=''):
+    if isinstance(data, str):
+        str_data = data.encode('utf-8')
+    elif isinstance(data, str):
+        str_data = data
+    return str_data
+def getZXXCode(LoginNum):
+    rd = redis.Redis(host=redis_db_ip, port=redis_port, db=6)
+    key_ = 'validateCode:user:{0}'.format(LoginNum)
+    for i in range(3):
+        if rd.exists(key_):
+            js = json.loads(rd.get(key_))
+            print('\n验证码:\t',js['code'])
+            return js['code']
+        time.sleep(1)
+session=requests.Session()
+# code="361963"
+server_url='http://192.168.1.251:50000'
+def ZZX(server_url,phone,task_type):
+    rd = redis.Redis(host=redis_db_ip, port=redis_port, db=6)
+    key_ = 'validateCode:user:{0}'.format(phone)
+    if rd.exists(key_):
+        js = json.loads(rd.get(key_))
+        print('\n验证码:\t',js['code'])
+    else:
+        code_url='{0}/v1/user/sendCode'.format(server_url)
+        session.post(url=code_url,data={"phone":phone})
+        time.sleep(3)
+        js = json.loads(rd.get(key_))
+        print('\n验证码:\t', js['code'])
+    code=js['code']
+    zxx_login='{0}/v1/user/login'.format(server_url)
+    zxx_res=session.post(url=zxx_login,data={"phone":phone,"validateCode":code})
+    zxx_json=json.loads(zxx_res.text)
+    zxx_token=zxx_json['data']['token']
+    list_url='{0}/v2/order/delivery/listOrders?flag=0&lat=0.0&lon=0.0&state=2'.format(server_url)
+    list_res=session.get(url=list_url,headers={'Authorization':zxx_token})
+    list_json=json.loads(changeIntoStr(list_res.text))
+    for orderId in list_json['data']:
+        print('运单编号:',orderId['invoiceNumberId'],'\t订单号:',str(orderId['mainOrderId']))
+    if task_type==str(1):
+        #送达
+        send_type = input('\n1.所有订单全部送达\t2.一个订单送达\n'.encode('gb18030'))
+        sendComplete_url='{0}/v1/order/delivery/sendComplete'.format(server_url)
+        if str(send_type)==str(1):
+            for sd in list_json['data']:
+                session.post(url=sendComplete_url,data={"numberId":sd['numberId'],"receiptCode":"8","receiveType":"cash"},headers={'Authorization':zxx_token})
+                print('运单编号:',sd['invoiceNumberId'],'已送达')
+        elif str(send_type)==str(2):
+            send_orderId=input('\n输入要送达的订单号:\n'.encode('gb18030'))
+            for sd in list_json['data']:
+                if sd['mainOrderId']==send_orderId:
+                    session.post(url=sendComplete_url,data={"numberId": sd['numberId'], "receiptCode": "8","receiveType": "cash"}, headers={'Authorization': zxx_token})
+                    print('运单编号:', sd['invoiceNumberId'], '已送达')
+                    break
+        else:
+            pass
+
+    elif task_type==str(2):
+        #拒收
+        refuse_orderId = input('\n输入拒收的订单号:\n'.encode('gb18030'))
+        refuse_url='{0}/v2/order/delivery/refuse'.format(server_url)
+        for sd in list_json['data']:
+            if sd['mainOrderId'] == refuse_orderId:
+                session.post(url=refuse_url,data={"numberId":sd['numberId'],"reason":"商品保质期不符合店家要求","receiptCode":"8"},headers={'Authorization':zxx_token})
+                print('运单编号:', sd['invoiceNumberId'], '已拒收')
+
+    elif task_type==str(3):
+        #部分送达
+        rejectPreview_orderId = input('\n输入部分送达的订单号:\n'.encode('gb18030'))
+        for sd in list_json['data']:
+            if sd['mainOrderId'] == rejectPreview_orderId:
+                goodDetail_url='{0}/v2/order/delivery/goodDetail'.format(server_url)
+                goodDetail_res=session.post(url=goodDetail_url,data={"deliveryOrderId":sd['id']},headers={'Authorization':zxx_token})
+                goodDetail_json=json.loads(changeIntoStr(goodDetail_res.text))
+                deliveryOrderId=goodDetail_json['data']['deliveryOrderId']
+                for detail in goodDetail_json['data']['details']:
+                    print('\n编号ID:',str(detail['id']),'\t商品上架名:',detail['name'],'\t数量为:',str(detail['quantity']))
+                if len(goodDetail_json['data']['details'])==1:
+                    refusePre_amount=input('\n输入商品拒收数量:\n'.encode('gb18030'))
+                    detail_ID=goodDetail_json['data']['details'][0]['id']
+                else:
+                    detail_ID = input('\n输入拒收商品编号ID:\n'.encode('gb18030'))
+                    refusePre_amount = input('\n输入商品拒收数量:\n'.encode('gb18030'))
+                rejectPreview_url='{0}/v2/order/delivery/rejectPreview'.format(server_url)
+                session.post(url=rejectPreview_url,data=json.dumps({"deliveryOrderId":deliveryOrderId,"details":json.dumps({str(detail_ID):int(refusePre_amount)})}),headers={'Authorization':zxx_token,"Content-Type":"application/json; charset=UTF-8"})
+                partArrive_url='{0}/v2/order/delivery/partArrive'.format(server_url)
+                partArrive_res=session.post(url=partArrive_url,data=json.dumps({"deliveryOrderId":deliveryOrderId,"details":json.dumps({str(detail_ID):int(refusePre_amount)}),"reason":"商品保质期不符合店家要求","receiptCode":"8","receiveType":"cash"}),headers={'Authorization':zxx_token,"Content-Type":"application/json; charset=UTF-8"})
+                print(partArrive_res.text)
+    elif task_type==str(4):
+        #退货取货
+        Tlist_url='{0}/v2/order/delivery/listOrders?flag=1&lat=0.0&lon=0.0&state=1'.format(server_url)
+        Tlist_res=session.get(url=Tlist_url,headers={'Authorization':zxx_token})
+        Tlist_json=json.loads(changeIntoStr(Tlist_res.text))
+        for Tlist in Tlist_json['data']:
+            Tdetail_url='{0}/v2/order/backGoods/listDetail?backOrderId={1}'.format(server_url,Tlist['backOrderId'])
+            Tdetail_res=session.get(url=Tdetail_url,headers={'Authorization':zxx_token})
+            Tdetail_json=json.loads(changeIntoStr(Tdetail_res.text))
+            for Td in Tdetail_json['data']['details']:
+                goodId=Td['goodId']
+                _id=Td['id']
+                Amount=Td['orgAmount']
+                backGood_url='{0}/v2/order/backGoods/backGoods'.format(server_url)
+                backGood_res=session.post(url=backGood_url,data=json.dumps({"detail":[{"goodId":goodId,"id":_id,"quantity":Amount,"realSum":0}],"backOrderId":Tlist['backOrderId']}),headers={'Authorization':zxx_token,"Content-Type":"application/json; charset=UTF-8"})
+                backGood_json=json.loads(changeIntoStr(backGood_res.text))
+                if backGood_json['tag']=='success':
+                    print('退货取货完成')
+    else:
+        pass
+ZZX(server_url,'17621145336','5')

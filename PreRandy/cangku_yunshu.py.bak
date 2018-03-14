@@ -1,0 +1,58 @@
+#coding:utf-8
+import requests
+import time
+import requests
+requests.packages.urllib3.disable_warnings()
+import MySQLdb
+from warnings import filterwarnings
+filterwarnings('ignore', category = MySQLdb.Warning)
+test_db_ip = '192.168.1.101'
+test_user = 'dddev'
+test_passwd = '123456'
+test_mainDb='ctcdb_new_test'
+test_ckDb='ctcdb_ck_test'
+server_url='http://192.168.1.251:48000'
+url_username = '12345678910'
+url_password = '123456'
+cityId=320700
+agencyId=171
+
+# session = requests.Session()
+# headers = {
+#     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36'}
+# login_url = '{0}/users/login'.format(server_url)
+# login_data = {'userName': url_username, 'password': url_password}
+# login_response = session.post(url=login_url, data=login_data, headers=headers)
+# # 切换城市
+# zdh_url = '{0}/users/updateAgency'.format(server_url)
+# zdh_data = {'cityId': cityId, 'agencyId': agencyId}
+# zdh_response = session.post(url=zdh_url, data=zdh_data, headers=headers)
+# print zdh_response.text
+# # 增加供应商
+# for i in range(5):
+#     boci_url='{0}/api/expressRoute/create/surplus'.format(server_url)
+#     boci_response=session.post(url=boci_url,data={"orderTime":time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()+5*60))})
+#     print boci_response.text
+#     orderId=''
+#     conn_test = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+#     cur = conn_test.cursor()
+#     conn_test.select_db(test_ckDb)
+#     cur.execute("select ExpressRouteId  from express_route_details where StoreGoodsOrderId='{0}'".format(orderId))
+#     data=cur.fetchone()
+#     print data[0]
+#     cur.close()
+#     conn_test.close()
+#     if data[0]:
+#         break
+#     time.sleep(2)
+# sureoder_url='{0}/api/pickGoods/pickList/create?id={1}'.format(server_url,data[0])
+conn_test = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+cur = conn_test.cursor()
+conn_test.select_db(test_ckDb)
+info=cur.execute("select * FROM couriers where deliveryManId !=\"Null\" and type= '2' and CityId='320700' and WarehouseId='80'")
+data = cur.fetchmany(info)
+
+print data
+cur.close()
+
+

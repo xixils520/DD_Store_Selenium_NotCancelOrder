@@ -1,0 +1,26 @@
+{
+  "fav":[
+    {
+      "coupon":{
+        "coupon_value":5,
+        "coupon_quantity":3,
+        "coupon_useBaseLine":30,
+        "coupon_instruction":"满30减5"
+      }
+    },
+    {
+      "redgift":{
+        "redGift_value":10,
+        "redGift_quantity":3,
+        "redGift_ownLimit":3,
+        "redGift_useBaseLine":40,
+        "redGift_instruction":"满40减10"
+      }
+    },
+    {
+      "dadou":{
+        "dadouCount":1000
+      }
+    }
+  ]
+}

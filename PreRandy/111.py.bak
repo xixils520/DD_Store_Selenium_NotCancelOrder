@@ -1,0 +1,10 @@
+# encoding=utf-8
+import csv
+with open("test.csv", "w") as csvfile:
+    writer = csv.writer(csvfile)
+
+    # 先写入columns_name
+    writer.writerow(["项目名称", "缺陷数量"])
+    # 写入多行用writerows
+    print(j.name,i)
+    writer.writerows(emptyArr)
