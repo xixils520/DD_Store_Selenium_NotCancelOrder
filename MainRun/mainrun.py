@@ -20,15 +20,15 @@ imp.reload(sys)
 def do_TestUnit():
     print('--------------开始执行测试用例----------------')
     testSuit=unittest.TestSuite()
-    testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityBase))
+    # testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityBase))
     testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityZengDou))
-    testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityManJian))
-    testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityManJianTD))
-    testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityManZhe))
-    testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityManZeng))
-    testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityHeiKa))
-    testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityWeiHuo))
-    testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityThird))
+    # testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityManJian))
+    # testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityManJianTD))
+    # testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityManZhe))
+    # testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityManZeng))
+    # testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityHeiKa))
+    # testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityWeiHuo))
+    # testSuit.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(StoreActivityThird))
     #清空截图
     screen_path = os.path.dirname(os.getcwd()) + '\\ScreenShot'
     result_path = os.path.dirname(os.getcwd()) + '\\TestResult'
