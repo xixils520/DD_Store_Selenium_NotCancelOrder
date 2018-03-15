@@ -10,15 +10,15 @@ from Public.ResolveHtml import getLoginStatus
 
 class StoreActivityHeiKa(SuperUnit):
     """商城活动,达豆,黑卡商品以及组合活动"""
-    def test_000(self):
-        """数据准备"""
-        #新建优惠券
-        preConditionForTest().TestMysqlCoupon()
-        #新建红包
-        preConditionForTest().createNewRedGift()
-        #取消客服所有订单
-        #preConditionForTest().cancleOrderFromSQL()
-        print('新建优惠券5元,新建红包10元,发放达豆数量1000，取消客服所有订单')
+    # def test_000(self):
+    #     """数据准备"""
+    #     #新建优惠券
+    #     preConditionForTest().TestMysqlCoupon()
+    #     #新建红包
+    #     preConditionForTest().createNewRedGift()
+    #     #取消客服所有订单
+    #     #preConditionForTest().cancleOrderFromSQL()
+    #     print('新建优惠券5元,新建红包10元,发放达豆数量1000，取消客服所有订单')
 
     def test_001(self):
         """黑卡商品活动(总价超过满折活动)"""
@@ -48,6 +48,7 @@ class StoreActivityHeiKa(SuperUnit):
         # if current_money != 300.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 300.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -79,6 +80,7 @@ class StoreActivityHeiKa(SuperUnit):
         # if current_money != 290.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 290.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -110,6 +112,7 @@ class StoreActivityHeiKa(SuperUnit):
         # if current_money != 275.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 275.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -141,6 +144,7 @@ class StoreActivityHeiKa(SuperUnit):
         # if current_money != 290.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 290.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单

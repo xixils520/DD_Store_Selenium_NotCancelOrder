@@ -3,9 +3,9 @@ import requests
 import time
 import requests
 requests.packages.urllib3.disable_warnings()
-import MySQLdb
+import pymysql
 from warnings import filterwarnings
-filterwarnings('ignore', category = MySQLdb.Warning)
+filterwarnings('ignore', category = pymysql.Warning)
 test_db_ip = '192.168.1.101'
 test_user = 'dddev'
 test_passwd = '123456'
@@ -34,7 +34,7 @@ agencyId=171
 #     boci_response=session.post(url=boci_url,data={"orderTime":time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()+5*60))})
 #     print boci_response.text
 #     orderId=''
-#     conn_test = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+#     conn_test = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
 #     cur = conn_test.cursor()
 #     conn_test.select_db(test_ckDb)
 #     cur.execute("select ExpressRouteId  from express_route_details where StoreGoodsOrderId='{0}'".format(orderId))
@@ -46,7 +46,7 @@ agencyId=171
 #         break
 #     time.sleep(2)
 # sureoder_url='{0}/api/pickGoods/pickList/create?id={1}'.format(server_url,data[0])
-conn_test = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+conn_test = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
 cur = conn_test.cursor()
 conn_test.select_db(test_ckDb)
 info=cur.execute("select * FROM couriers where deliveryManId !=\"Null\" and type= '2' and CityId='320700' and WarehouseId='80'")

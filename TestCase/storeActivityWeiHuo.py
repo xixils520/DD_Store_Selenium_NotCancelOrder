@@ -11,15 +11,15 @@ from Public.ResolveHtml import getLoginStatus
 class StoreActivityWeiHuo(SuperUnit):
     """商城活动,达豆,尾货商品以及组合活动"""
 
-    def test_000(self):
-        """数据准备"""
-        #新建优惠券
-        preConditionForTest().TestMysqlCoupon()
-        #新建红包
-        preConditionForTest().createNewRedGift()
-        #取消客服所有订单
-        #preConditionForTest().cancleOrderFromSQL()
-        print('新建优惠券5元,新建红包10元,发放达豆数量1000，取消客服所有订单')
+    # def test_000(self):
+    #     """数据准备"""
+    #     #新建优惠券
+    #     preConditionForTest().TestMysqlCoupon()
+    #     #新建红包
+    #     preConditionForTest().createNewRedGift()
+    #     #取消客服所有订单
+    #     #preConditionForTest().cancleOrderFromSQL()
+    #     print('新建优惠券5元,新建红包10元,发放达豆数量1000，取消客服所有订单')
 
     def test_001(self):
         """尾货闪销活动(总价超过满折活动)"""
@@ -48,6 +48,7 @@ class StoreActivityWeiHuo(SuperUnit):
         # if current_money != 210.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 210.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         elementLocate(self.driver,".//div[2]/div[2]/div[3]/button[2]").clickElementByXpath()
         time.sleep(2)
@@ -82,6 +83,7 @@ class StoreActivityWeiHuo(SuperUnit):
         # if current_money != 85.5:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 85.5)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         elementLocate(self.driver,".//div[2]/div[2]/div[3]/button[2]").clickElementByXpath()
         time.sleep(2)

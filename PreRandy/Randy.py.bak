@@ -6,15 +6,15 @@ import random
 import redis
 import requests
 requests.packages.urllib3.disable_warnings()
-import MySQLdb
+import pymysql
 from warnings import filterwarnings
-filterwarnings('ignore', category = MySQLdb.Warning)
+filterwarnings('ignore', category = pymysql.Warning)
 test_db_ip = '192.168.1.101'
 test_user = 'dddev'
 test_passwd = '123456'
 test_mainDb='ctcdb_new_test'
 test_ckDb='ctcdb_ck_test'
-conn_test = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306,charset="utf8")
+conn_test = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306,charset="utf8")
 
 redis_db_ip='192.168.1.101'
 redis_port=6379
@@ -201,7 +201,7 @@ def mainstorerun(cityId, agencyId, server_url, url_username, url_password, order
         boci_url = '{0}/api/expressRoute/create/surplus'.format(server_url)
         session.post(url=boci_url,
                      data={"orderTime": time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time() + 5 * 60))})
-        conn_test1 = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+        conn_test1 = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
         cur = conn_test1.cursor()
         conn_test1.select_db(test_ckDb)
         cur.execute("select ExpressRouteId  from express_route_details where StoreGoodsOrderId='{0}'".format(orderId))
@@ -218,7 +218,7 @@ def mainstorerun(cityId, agencyId, server_url, url_username, url_password, order
         JH = session.get(url=sureoder_url, headers=headers)
         print JH.text
         time.sleep(20)
-        conn_test2 = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+        conn_test2 = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
         cur = conn_test2.cursor()
         conn_test2.select_db(test_ckDb)
         info = cur.execute(
@@ -287,7 +287,7 @@ def prestorerun(cityId,agencyId,server_url,url_username,url_password,orderId):
     for i in range(6):
         boci_url = '{0}/api/expressRoute/create/surplus'.format(server_url)
         session.post(url=boci_url, data={"orderTime": time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time() + 5 * 60))})
-        conn_test1 = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+        conn_test1 = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
         cur = conn_test1.cursor()
         conn_test1.select_db(test_ckDb)
         cur.execute("select ExpressRouteId  from express_route_details where StoreGoodsOrderId='{0}'".format(orderId))
@@ -304,7 +304,7 @@ def prestorerun(cityId,agencyId,server_url,url_username,url_password,orderId):
         JH=session.get(url=sureoder_url,headers=headers)
         print JH.text
         time.sleep(2)
-        conn_test2 = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+        conn_test2 = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
         cur = conn_test2.cursor()
         conn_test2.select_db(test_ckDb)
         info=cur.execute("select a.PickListId, a.id,a.orderQuantity,a.actualQuantity,b.numberId  from pick_list_details as a,pick_lists as b where a.PickListId=b.id and b.ExpressRouteId={0}".format(numID))

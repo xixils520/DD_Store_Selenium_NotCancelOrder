@@ -35,6 +35,7 @@ class StoreActivityThird(SuperUnit):
         # if current_money != 64.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 64.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
 
@@ -68,6 +69,7 @@ class StoreActivityThird(SuperUnit):
         # if current_money != 69.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 69.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
 
@@ -97,6 +99,7 @@ class StoreActivityThird(SuperUnit):
         # if current_money != 64.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 64.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
 
@@ -129,6 +132,7 @@ class StoreActivityThird(SuperUnit):
         # if current_money != 84.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 84.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
 
@@ -159,6 +163,7 @@ class StoreActivityThird(SuperUnit):
         # if current_money != 173.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 173.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
 
@@ -191,6 +196,7 @@ class StoreActivityThird(SuperUnit):
         # if current_money != 252.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 252.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
 
@@ -226,6 +232,7 @@ class StoreActivityThird(SuperUnit):
         # if current_money != 298.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 298.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
 
@@ -257,6 +264,7 @@ class StoreActivityThird(SuperUnit):
         # if current_money != 293.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 293.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
 

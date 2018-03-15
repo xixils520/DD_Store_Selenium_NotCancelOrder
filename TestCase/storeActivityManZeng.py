@@ -11,15 +11,15 @@ from Public.ResolveHtml import getZengId
 class StoreActivityManZeng(SuperUnit):
     """商城活动,优惠卷,红包,达豆,满赠商品(满300赠)以及组合活动"""
 
-    def test_000(self):
-        """数据准备"""
-        #新建优惠券
-        preConditionForTest().TestMysqlCoupon()
-        #新建红包
-        preConditionForTest().createNewRedGift()
-        #取消客服所有订单
-        #preConditionForTest().cancleOrderFromSQL()
-        print('新建优惠券5元,新建红包10元,发放达豆数量1000，取消客服所有订单')
+    # def test_000(self):
+    #     """数据准备"""
+    #     #新建优惠券
+    #     preConditionForTest().TestMysqlCoupon()
+    #     #新建红包
+    #     preConditionForTest().createNewRedGift()
+    #     #取消客服所有订单
+    #     #preConditionForTest().cancleOrderFromSQL()
+    #     print('新建优惠券5元,新建红包10元,发放达豆数量1000，取消客服所有订单')
     def test_001(self):
         """满赠活动,满300赠,满折(满200打8折)"""
         #满赠活动
@@ -61,6 +61,7 @@ class StoreActivityManZeng(SuperUnit):
         # self.assertTrue(current_money == 360.0)
         # self.assertTrue(self.ZGoodId==getZGoodId)
         # self.assertTrue(self.ZGoodIdCount==getZGoodIdCount)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -105,6 +106,7 @@ class StoreActivityManZeng(SuperUnit):
         # self.assertTrue(current_money == 355.0)
         # self.assertTrue(self.ZGoodId==getZGoodId)
         # self.assertTrue(self.ZGoodIdCount==getZGoodIdCount)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -149,6 +151,7 @@ class StoreActivityManZeng(SuperUnit):
         # self.assertTrue(current_money == 350.0)
         # self.assertTrue(self.ZGoodId==getZGoodId)
         # self.assertTrue(self.ZGoodIdCount==getZGoodIdCount)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -194,6 +197,7 @@ class StoreActivityManZeng(SuperUnit):
         # self.assertTrue(current_money == 350.0)
         # self.assertTrue(self.ZGoodId==getZGoodId)
         # self.assertTrue(self.ZGoodIdCount==getZGoodIdCount)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -234,6 +238,7 @@ class StoreActivityManZeng(SuperUnit):
         # self.assertTrue(current_money == 345.0)
         # self.assertTrue(self.ZGoodId==getZGoodId)
         # self.assertTrue(self.ZGoodIdCount==getZGoodIdCount)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -275,6 +280,7 @@ class StoreActivityManZeng(SuperUnit):
         # self.assertTrue(current_money == 345.0)
         # self.assertTrue(self.ZGoodId==getZGoodId)
         # self.assertTrue(self.ZGoodIdCount==getZGoodIdCount)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -316,6 +322,7 @@ class StoreActivityManZeng(SuperUnit):
         # self.assertTrue(current_money == 340.0)
         # self.assertTrue(self.ZGoodId==getZGoodId)
         # self.assertTrue(self.ZGoodIdCount==getZGoodIdCount)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -355,6 +362,7 @@ class StoreActivityManZeng(SuperUnit):
         # self.assertTrue(current_money == 335.0)
         # self.assertTrue(self.ZGoodId==getZGoodId)
         # self.assertTrue(self.ZGoodIdCount==getZGoodIdCount)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单

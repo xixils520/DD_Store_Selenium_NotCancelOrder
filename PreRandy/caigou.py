@@ -9,15 +9,15 @@ url_password='123456'
 invent_url='http://192.168.1.251:48000'
 
 
-import MySQLdb
+import pymysql
 from warnings import filterwarnings
-filterwarnings('ignore', category = MySQLdb.Warning)
+filterwarnings('ignore', category = pymysql.Warning)
 test_db_ip = '192.168.1.101'
 test_user = 'dddev'
 test_passwd = '123456'
 test_mainDb='ctcdb_new_test'
 test_ckDb='ctcdb_ck_test'
-conn_test = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306,charset="utf8")
+conn_test = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306,charset="utf8")
 
 def changeIntoStr(data,str_data=''):
     if isinstance(data, str):
@@ -102,7 +102,7 @@ def create_product(cityID,warehouseId,goodId,quantity):
         addOrder_response=session.post(url=addOrder_url,data=addOrder_data,headers=headers)
         # print addOrder_response.text
         time.sleep(2)
-        conn_test11 = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+        conn_test11 = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
         cur11 = conn_test11.cursor()
         conn_test11.select_db(test_mainDb)
         cur11.execute("select id from stock_in_orders WHERE state='0' and ProviderId='{0}' order by id desc limit 1 ".format(providerId))

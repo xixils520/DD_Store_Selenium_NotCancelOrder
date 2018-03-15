@@ -10,15 +10,15 @@ from Public.ResolveHtml import getLoginStatus
 class StoreActivityManZhe(SuperUnit):
     """商城活动,优惠券,红包,达豆,满折(满200打8折)以及组合活动"""
 
-    def test_000(self):
-        """数据准备"""
-        #新建优惠券
-        preConditionForTest().TestMysqlCoupon()
-        #新建红包
-        preConditionForTest().createNewRedGift()
-        #取消客服所有订单
-        #preConditionForTest().cancleOrderFromSQL()
-        print('新建优惠券5元,新建红包10元,发放达豆数量1000，取消客服所有订单')
+    # def test_000(self):
+    #     """数据准备"""
+    #     #新建优惠券
+    #     preConditionForTest().TestMysqlCoupon()
+    #     #新建红包
+    #     preConditionForTest().createNewRedGift()
+    #     #取消客服所有订单
+    #     #preConditionForTest().cancleOrderFromSQL()
+    #     print('新建优惠券5元,新建红包10元,发放达豆数量1000，取消客服所有订单')
 
     def test_001(self):
         """满折活动,满200打8折"""
@@ -58,6 +58,7 @@ class StoreActivityManZhe(SuperUnit):
         # if current_money != 180.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 180.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -99,6 +100,7 @@ class StoreActivityManZhe(SuperUnit):
         # if current_money != 175.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 175.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -139,6 +141,7 @@ class StoreActivityManZhe(SuperUnit):
         # if current_money != 170.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 170.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -179,6 +182,7 @@ class StoreActivityManZhe(SuperUnit):
         # if current_money != 171.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 171.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -215,6 +219,7 @@ class StoreActivityManZhe(SuperUnit):
         # if current_money != 165.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 165.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -252,6 +257,7 @@ class StoreActivityManZhe(SuperUnit):
         # if current_money != 166.5:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 166.5)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -289,6 +295,7 @@ class StoreActivityManZhe(SuperUnit):
         # if current_money != 161.5:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 161.5)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -322,6 +329,7 @@ class StoreActivityManZhe(SuperUnit):
         # if current_money != 157.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 157.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单

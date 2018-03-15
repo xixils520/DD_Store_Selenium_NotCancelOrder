@@ -1,17 +1,17 @@
 #coding:utf-8
-import MySQLdb
+import pymysql
 import json
 import urllib.request, urllib.error, urllib.parse
 import time
 import requests
 from warnings import filterwarnings
-filterwarnings('ignore', category = MySQLdb.Warning)
+filterwarnings('ignore', category = pymysql.Warning)
 test_db_ip = '192.168.1.101'
 test_user = 'dddev'
 test_passwd = '123456'
 test_mainDb='ctcdb_new_test'
 test_ckDb='ctcdb_ck_test'
-conn_test = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306,charset="utf8")
+conn_test = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306,charset="utf8")
 
 def changeIntoStr(data,str_data=''):
     if isinstance(data, str):
@@ -29,7 +29,7 @@ def ZP_order(cityId,agencyId,invent_url,url_username,url_password,warehouseId,or
     zdh_url = '{0}/users/updateAgency'.format(invent_url)
     zdh_data = {'cityId':cityId,'agencyId':agencyId}
     NewSession.post(url=zdh_url, data=zdh_data)
-    conn_test_A = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+    conn_test_A = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
     cur_A = conn_test_A.cursor()
     conn_test_A.select_db(test_ckDb)
     cur_A.execute("select id,rgl_number_id,rgl_store_goods_order_id,createdAt FROM return_goods_list where rgl_state='0' and rgl_warehouse_id='{0}'and rgl_store_goods_order_id='{1}' order by id desc".format(warehouseId,orderId))
@@ -53,7 +53,7 @@ def TH_RU(cityId,agencyId,invent_url,url_username,url_password,warehouseId,order
     zdh_url = '{0}/users/updateAgency'.format(invent_url)
     zdh_data = {'cityId':cityId,'agencyId':agencyId}
     NewSession.post(url=zdh_url, data=zdh_data)
-    conn_test_A = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+    conn_test_A = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
     cur_A = conn_test_A.cursor()
     conn_test_A.select_db(test_ckDb)
     cur_A.execute("select id,rgl_number_id,rgl_store_goods_order_id,createdAt FROM return_goods_list where rgl_state='20' and rgl_warehouse_id='{0}'and rgl_store_goods_order_id='{1}' order by id desc".format(warehouseId,orderId))
@@ -95,7 +95,7 @@ def SJ(cityId,agencyId,invent_url,url_username,url_password,warehouseId,orderId)
     zdh_url = '{0}/users/updateAgency'.format(invent_url)
     zdh_data = {'cityId':cityId,'agencyId':agencyId}
     NewSession.post(url=zdh_url, data=zdh_data)
-    conn_test_A = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+    conn_test_A = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
     cur_A = conn_test_A.cursor()
     conn_test_A.select_db(test_ckDb)
     cur_A.execute("select identificationCode  FROM check_up_orders where state='999' and WarehouseId='{0}'and StockInOrderId='{1}' order by id desc limit 1".format(warehouseId,orderId))
@@ -110,7 +110,7 @@ def SJ(cityId,agencyId,invent_url,url_username,url_password,warehouseId,orderId)
         onRack_url='{0}/api/onRack/createOnRack'.format(invent_url)
         NewSession.post(url=onRack_url,data={'identificationCode':zp[0],'token':token})
 
-        conn_test_B = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+        conn_test_B = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
         cur_B = conn_test_B.cursor()
         conn_test_B.select_db(test_ckDb)
         cur_B.execute("select id,numberId FROM on_racks where state='0' and WarehouseId='{0}'and checkUpOrderId='{1}' order by id desc limit 1".format(warehouseId, zp[0]))
@@ -155,7 +155,7 @@ def SJ(cityId,agencyId,invent_url,url_username,url_password,warehouseId,orderId)
             print('\n系统无相应库位号')
 
 def TTT():
-    conn_test_N = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+    conn_test_N = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
     cur_N = conn_test_N.cursor()
     conn_test_N.select_db(test_mainDb)
     cur_N.execute("select * from stock_in_orders WHERE state='0' and ProviderId='{0}' and sumWithTax='{1}'order by id desc limit 1 ".format(100716,24))
@@ -185,7 +185,7 @@ def mainstorerun(cityId, agencyId, server_url, url_username, url_password, order
         boci_url = '{0}/api/expressRoute/create/surplus'.format(server_url)
         session.post(url=boci_url,
                      data={"orderTime": time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time() + 5 * 60))})
-        conn_test1 = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+        conn_test1 = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
         cur = conn_test1.cursor()
         conn_test1.select_db(test_ckDb)
         cur.execute("select ExpressRouteId  from express_route_details where StoreGoodsOrderId='{0}'".format(orderId))
@@ -201,7 +201,7 @@ def mainstorerun(cityId, agencyId, server_url, url_username, url_password, order
         sureoder_url = '{0}/api/pickGoods/pickList/create?id={1}'.format(server_url, numID)
         JH = session.get(url=sureoder_url, headers=headers)
         print(JH.text)
-        conn_test2 = MySQLdb.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
+        conn_test2 = pymysql.connect(host=test_db_ip, user=test_user, passwd=test_passwd, port=3306, charset="utf8")
         cur = conn_test2.cursor()
         conn_test2.select_db(test_ckDb)
         info = cur.execute(

@@ -9,15 +9,15 @@ from Public.ResolveHtml import getLoginStatus
 
 class StoreActivityManJianTD(SuperUnit):
     """商城活动,满减商品多梯度(100减10,200减25,300减40)以及组合活动"""
-    def test_000(self):
-        """数据准备"""
-        #新建优惠券
-        preConditionForTest().TestMysqlCoupon()
-        #新建红包
-        preConditionForTest().createNewRedGift()
-        #取消客服所有订单
-        #preConditionForTest().cancleOrderFromSQL()
-        print('新建优惠券5元,新建红包10元,发放达豆数量1000，取消客服所有订单')
+    # def test_000(self):
+    #     """数据准备"""
+    #     #新建优惠券
+    #     preConditionForTest().TestMysqlCoupon()
+    #     #新建红包
+    #     preConditionForTest().createNewRedGift()
+    #     #取消客服所有订单
+    #     #preConditionForTest().cancleOrderFromSQL()
+    #     print('新建优惠券5元,新建红包10元,发放达豆数量1000，取消客服所有订单')
 
     def test_001(self):
         """满减活动,优惠券,红包,达豆,第一梯度满100减10"""
@@ -45,6 +45,7 @@ class StoreActivityManJianTD(SuperUnit):
         # if current_money != 71.5:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 71.5)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(3)
         #取消订单
@@ -77,6 +78,7 @@ class StoreActivityManJianTD(SuperUnit):
         # if current_money != 152.0:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 152.0)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单
@@ -111,6 +113,7 @@ class StoreActivityManJianTD(SuperUnit):
         # if current_money != 183.5:
         #     self.screenShot(getPath(self._testMethodName))
         # self.assertTrue(current_money == 183.5)
+        elementLocate(self.driver, ".//*[@id='cart_preview']/div[7]/div/div[1]").clickElementByXpath()
         elementLocate(self.driver, ".//*[@id='checkout_button']/button").clickElementByXpath()
         time.sleep(2)
         # 取消订单

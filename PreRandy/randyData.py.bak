@@ -7,9 +7,9 @@ import logging
 import os
 import urllib2
 import hashlib
-import MySQLdb
+import pymysql
 from warnings import filterwarnings
-filterwarnings('ignore', category = MySQLdb.Warning)
+filterwarnings('ignore', category = pymysql.Warning)
 class preConditionForTest(object):
     """
     测试环境，南京账号数据准备测试：
@@ -88,7 +88,7 @@ class preConditionForTest(object):
         """
         conn_test:初始化链接测试环境数据库
         """
-        self.conn_test = MySQLdb.connect(host=self.test_db_ip, user=self.test_user, passwd=self.test_passwd, port=3306,charset="utf8")
+        self.conn_test = pymysql.connect(host=self.test_db_ip, user=self.test_user, passwd=self.test_passwd, port=3306,charset="utf8")
         """
         初始化log格式
         """
