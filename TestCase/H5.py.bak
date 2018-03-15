@@ -1670,7 +1670,7 @@ def zengGoodId(html):
 
 
 def getPath(case_name):
-    path = os.path.dirname(os.getcwd()) + '\\ScreenShot\\' + case_name+'_'+str(int(time.time()*1000)) + '.png'
+    path = os.path.abspath(os.getcwd()) + '\\ScreenShot\\' + case_name+'_'+str(int(time.time()*1000)) + '.png'
     return path
 
 

@@ -35,14 +35,14 @@ class SuperUnit(TestCase):
 
     @classmethod
     def load_json(cls):
-        with open(os.path.dirname(os.getcwd()) + '\\Settings\\storeInfo.json', 'r') as load_f:
+        with open(os.path.abspath(os.getcwd()) + '\\Settings\\storeInfo.json', 'r') as load_f:
             load_json = json.load(load_f)
         return load_json
 
     @classmethod
     def setUpClass(cls):
         #初始化webdriver
-        cls.driver=webdriver.Firefox(executable_path=r'C:\ProgramData\Anaconda3\geckodriver.exe',log_path=os.path.dirname(os.getcwd())+'\\TestLog\\geckodriver.log')
+        cls.driver=webdriver.Firefox(executable_path=r'C:\ProgramData\Anaconda3\geckodriver.exe',log_path=os.path.abspath(os.getcwd())+'\\TestLog\\geckodriver.log')
         cls.driver.maximize_window()
         time.sleep(2)
     @classmethod

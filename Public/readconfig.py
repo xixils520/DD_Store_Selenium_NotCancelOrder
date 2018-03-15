@@ -2,7 +2,7 @@
 import configparser
 import os
 import shutil
-fileJudge=os.path.dirname(os.getcwd())
+fileJudge=os.path.abspath(os.getcwd())
 
 def readAppConfig(tag_session,tag_info):
     config = configparser.ConfigParser()

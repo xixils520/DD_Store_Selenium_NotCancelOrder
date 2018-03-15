@@ -8261,3 +8261,283 @@ JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, lin
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
 1521101912945	geckodriver::marionette	ERROR	Failed to stop browser process
+1521102574397	geckodriver	INFO	geckodriver 0.20.0
+1521102574407	geckodriver	INFO	Listening on 127.0.0.1:59648
+1521102577431	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\李松\\AppData\\Local\\Temp\\rust_mozprofile.7ukog0lcqlRC"
+1521102578361	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+1521102579165	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+[Child 6228] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6228] WARNING: pipe error:1521102582175	Marionette	INFO	Listening on port 59656
+1521102582732	Marionette	WARN	TLS certificate errors will be ignored for this session
+1521102582791	Marionette	DEBUG	Register listener.js for window 4294967297
+1521102584918	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1521102584945	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1521102584945	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1521102586978	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/login"
+1521102586984	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/login"
+JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, line 511: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, line 511: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, line 511: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, line 511: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, line 511: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, line 511: ReferenceError: event is not defined
+1521102597324	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102600336	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/home"
+1521102600409	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/home"
+1521102600410	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/home"
+1521102600853	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102600914	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102602724	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102607541	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102612110	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102612136	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102612139	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102612440	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/order/preview"
+1521102612502	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/order/preview"
+1521102617321	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102623696	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102630056	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102634873	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102641223	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102646008	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102650784	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102657824	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/order/result"
+1521102657990	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/order/result"
+1521102657990	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/order/result"
+1521102658999	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/home"
+1521102659467	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/home"
+1521102662570	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/home"
+1521102662667	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/home"
+1521102662667	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/home"
+1521102663129	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102663182	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102665010	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102669818	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102674400	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102674463	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102674465	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102674741	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/order/preview"
+1521102674796	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/order/preview"
+1521102679648	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102685980	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102690780	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102697109	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102701872	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102706649	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102713676	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/order/result"
+1521102713796	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/order/result"
+1521102713797	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/order/result"
+1521102714294	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/home"
+1521102714477	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/home"
+1521102717546	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/home"
+1521102717646	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/home"
+1521102717646	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/home"
+1521102718101	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102718174	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102720000	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102724817	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102729405	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102729432	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102729435	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102729687	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/order/preview"
+1521102729733	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/order/preview"
+1521102734612	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102741111	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102747438	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102752208	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102756973	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102764011	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/order/result"
+1521102764143	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/order/result"
+1521102764144	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/order/result"
+1521102764833	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/home"
+1521102765016	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/home"
+1521102768097	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/home"
+1521102768196	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/home"
+1521102768196	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/home"
+1521102768590	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102768656	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102770472	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102775264	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102779832	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102779859	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102779861	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102780168	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/order/preview"
+1521102780224	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/order/preview"
+1521102785092	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102791474	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102797835	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102802621	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102807405	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102814454	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/order/result"
+1521102814569	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/order/result"
+1521102814569	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/order/result"
+1521102815075	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/home"
+1521102815156	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/home"
+1521102818219	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/home"
+1521102818309	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/home"
+1521102818309	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/home"
+1521102818725	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102818796	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102820611	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102825398	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102829975	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102829999	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102830001	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102830299	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/order/preview"
+1521102830346	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/order/preview"
+1521102835228	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102841591	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102846365	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102851138	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102858167	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/order/result"
+1521102858289	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/order/result"
+1521102858290	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/order/result"
+1521102858808	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/home"
+1521102858938	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/home"
+1521102862045	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/home"
+1521102862140	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/home"
+1521102862140	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/home"
+1521102862564	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102862726	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102864529	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102869329	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102873901	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102873926	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102873927	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102874193	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/order/preview"
+1521102874259	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/order/preview"
+1521102879140	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102885472	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102890254	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102895046	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102902092	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/order/result"
+1521102902202	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/order/result"
+1521102902202	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/order/result"
+1521102902830	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/home"
+1521102902894	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/home"
+1521102905957	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/home"
+1521102906056	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/home"
+1521102906056	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/home"
+1521102906421	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102906509	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102908334	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102913123	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102917692	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102917720	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102917723	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102917970	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/order/preview"
+1521102918022	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/order/preview"
+1521102922904	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102929243	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102934022	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102941077	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/order/result"
+1521102941211	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/order/result"
+1521102941212	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/order/result"
+1521102941670	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/home"
+1521102941890	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/home"
+1521102944963	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/home"
+1521102945061	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/home"
+1521102945061	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/home"
+1521102945475	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102945539	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102947349	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102952143	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102956706	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102956734	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102956736	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102956990	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/order/preview"
+1521102957039	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/order/preview"
+1521102961832	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102966667	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102973706	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/order/result"
+1521102973860	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/order/result"
+1521102973861	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/order/result"
+1521102974318	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/home"
+1521102974471	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/home"
+1521102977542	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/home"
+1521102977634	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/home"
+1521102977634	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/home"
+1521102978005	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102978073	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102979888	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102984681	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102989462	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102994261	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521102998837	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102998871	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102998872	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521102999164	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/order/preview"
+1521102999238	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/order/preview"
+1521103004054	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521103008855	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521103015873	Marionette	INFO	New connections will no longer be accepted
+[Parent 9628] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8968] WARNING: pipe error: 109: file z:[Parent 9628] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17360] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17360] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromi
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1521103016793	geckodriver::marionette	ERROR	Failed to stop browser process
+1521109855590	geckodriver	INFO	geckodriver 0.20.0
+1521109855601	geckodriver	INFO	Listening on 127.0.0.1:50148
+1521109858586	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\李松\\AppData\\Local\\Temp\\rust_mozprofile.Lsc0tp3X2jJd"
+1521109859856	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+1521109860824	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+[Child 22524] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 22524] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_1521109868097	Marionette	INFO	Listening on port 50162
+1521109868558	Marionette	WARN	TLS certificate errors will be ignored for this session
+1521109868647	Marionette	DEBUG	Register listener.js for window 4294967297
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+1521109870910	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1521109870934	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1521109870935	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1521109872726	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/login"
+1521109872732	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/login"
+JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, line 511: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, line 511: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, line 511: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, line 511: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, line 511: ReferenceError: event is not defined
+JavaScript error: http://192.168.1.251:30011/javascript/login/bundle.min.js, line 511: ReferenceError: event is not defined
+1521109882857	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521109885869	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/home"
+1521109885953	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/home"
+1521109885953	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/home"
+1521109886387	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/detail?gid=125802"
+1521109886566	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/detail?gid=125802"
+1521109888375	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521109893170	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521109897751	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521109897775	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/detail?gid=125802"
+1521109897781	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521109898087	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/order/preview"
+1521109898140	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/order/preview"
+1521109902984	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521109909338	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521109927513	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/order/preview"
+1521109927744	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/order/preview"
+1521109927745	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/order/preview"
+1521109928311	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/home"
+1521109928672	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/home"
+1521109931763	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/home"
+1521109931858	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/home"
+1521109931858	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/home"
+1521109932351	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://192.168.1.251:30011/detail?gid=125802"
+1521109932412	Marionette	DEBUG	Received DOM event "pageshow" for "http://192.168.1.251:30011/detail?gid=125802"
+1521109934250	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521109939067	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1521109944096	Marionette	DEBUG	Received DOM event "beforeunload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521109944232	Marionette	DEBUG	Received DOM event "pagehide" for "http://192.168.1.251:30011/detail?gid=125802"
+1521109944234	Marionette	DEBUG	Received DOM event "unload" for "http://192.168.1.251:30011/detail?gid=125802"
+1521109944946	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967297"
+[Child 7016] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7016] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346

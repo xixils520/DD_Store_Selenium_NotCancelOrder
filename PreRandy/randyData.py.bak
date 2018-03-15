@@ -134,7 +134,7 @@ class preConditionForTest(object):
 
     @classmethod
     def load_json(cls,jsonfile=None):
-        with open(os.path.dirname(os.getcwd()) + '\\Settings\\storeInfo.json', 'r') as load_f:
+        with open(os.path.abspath(os.getcwd()) + '\\Settings\\storeInfo.json', 'r') as load_f:
             load_json = json.load(load_f)
         return load_json
 

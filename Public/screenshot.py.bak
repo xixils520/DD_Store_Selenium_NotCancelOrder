@@ -11,7 +11,7 @@ import write_represult
 import processfile
 
 class defpath(object):
-    work_path1=os.path.dirname(os.getcwd())+"\\result\\excel\\"
+    work_path1=os.path.abspath(os.getcwd())+"\\result\\excel\\"
     excelfile="FailureReport.xls"
 
 class screenshot(object):
