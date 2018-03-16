@@ -1,0 +1,44 @@
+1521167870048	geckodriver	INFO	geckodriver 0.20.0
+1521167870057	geckodriver	INFO	Listening on 127.0.0.1:57506
+1521167873088	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\李松\\AppData\\Local\\Temp\\rust_mozprofile.TnMYReWy1gsO"
+1521167874310	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+1521167875188	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+[Child 14584] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2400FC,name=PContent::Msg_AsyncMessage) Channel closing: too late to send/recv, messages will be lost
+
+[Child 14584] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+JavaScript error: jar:file:///C:/Program%20Files/Mozilla%20Firefox/omni.ja!/components/extension-process-script.js, line 339: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIMessageSender.sendAsyncMessage]
+1521167881807	Marionette	INFO	Listening on port 57514
+1521167882574	Marionette	WARN	TLS certificate errors will be ignored for this session
+1521167882626	Marionette	DEBUG	Register listener.js for window 4294967297
+1521167882736	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1521167883611	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1521167883611	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+Unable to read VR Path Registry from C:\Users\李松\AppData\Local\openvr\openvrpaths.vrpath
+1521167884650	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.dd528.com/login"
+1521167884913	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.dd528.com/login"
+JavaScript error: https://static.dd528.com/mall/src/3.3.9.1/login.mall.web.js, line 1: ReferenceError: event is not defined
+JavaScript error: https://static.dd528.com/mall/src/3.3.9.1/login.mall.web.js, line 1: ReferenceError: event is not defined
+JavaScript error: https://static.dd528.com/mall/src/3.3.9.1/login.mall.web.js, line 1: ReferenceError: event is not defined
+JavaScript error: https://static.dd528.com/mall/src/3.3.9.1/login.mall.web.js, line 1: ReferenceError: event is not defined
+JavaScript error: https://static.dd528.com/mall/src/3.3.9.1/login.mall.web.js, line 1: ReferenceError: event is not defined
+JavaScript error: https://static.dd528.com/mall/src/3.3.9.1/login.mall.web.js, line 1: ReferenceError: event is not defined
+1521167885380	Marionette	DEBUG	Received DOM event "beforeunload" for "http://www.dd528.com/login"
+1521167885458	Marionette	DEBUG	Received DOM event "pagehide" for "http://www.dd528.com/login"
+1521167885462	Marionette	DEBUG	Received DOM event "unload" for "http://www.dd528.com/login"
+1521167886378	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.dd528.com/home"
+1521167886890	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.dd528.com/home"
+1521167890023	Marionette	DEBUG	Received DOM event "beforeunload" for "http://www.dd528.com/home"
+1521167890126	Marionette	DEBUG	Received DOM event "pagehide" for "http://www.dd528.com/home"
+1521167890129	Marionette	DEBUG	Received DOM event "unload" for "http://www.dd528.com/home"
+1521167890637	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.dd528.com/user/order/list"
+1521167890840	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.dd528.com/user/order/list"
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
