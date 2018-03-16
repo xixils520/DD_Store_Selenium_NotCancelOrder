@@ -9079,3 +9079,36 @@ Unable to read VR Path Registry from C:\WINDOWS\system32\config\systemprofile\Ap
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1521165290011	geckodriver	INFO	geckodriver 0.20.0
+1521165290024	geckodriver	INFO	Listening on 127.0.0.1:55682
+1521165293023	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofile.EwGWPo9unv9Q"
+1521165294238	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+Unable to read VR Path Registry from C:\WINDOWS\system32\config\systemprofile\AppData\Local\openvr\openvrpaths.vrpath
+1521165295452	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\WINDOWS\system32\config\systemprofile\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\WINDOWS\system32\config\systemprofile\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\WINDOWS\system32\config\systemprofile\AppData\Local\openvr\openvrpaths.vrpath
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150084,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150078,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150084,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150078,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+1521165304118	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+Unable to read VR Path Registry from C:\WINDOWS\system32\config\systemprofile\AppData\Local\openvr\openvrpaths.vrpath
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150084,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150078,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
