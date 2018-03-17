@@ -37,7 +37,7 @@ def do_TestUnit():
     #定义个报告存放路径，支持相对路径
     now = time.strftime('%Y-%m-%d-%H_%M_%S', time.localtime(time.time()))
     print('开始时间',now)
-    filename =os.path.abspath(os.getcwd())+ '\\TestResult\\'+now+"-result.html"
+    filename =os.path.abspath(os.getcwd())+ '\\TestResult\\'+"result.html"
     fp = open(filename, 'wb')
     #定义测试报告
     runner = HTMLTestRunnerCN.HTMLTestRunner(stream=fp, title='店达商城自动化测试报告',description='详细测试报告:')
