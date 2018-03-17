@@ -9,15 +9,15 @@ from Public.ResolveHtml import getLoginStatus
 
 class StoreActivityManJian(SuperUnit):
     """商城活动,优惠卷,红包,达豆,满减商品(满50减10)以及组合活动"""
-    # def test_000(self):
-    #     """数据准备"""
-    #     #新建优惠券
-    #     preConditionForTest().TestMysqlCoupon()
-    #     #新建红包
-    #     preConditionForTest().createNewRedGift()
-    #     #取消客服所有订单
-    #     #preConditionForTest().cancleOrderFromSQL()
-    #     print('新建优惠券5元,新建红包10元,发放达豆数量1000，取消客服所有订单')
+    def test_000(self):
+        """数据准备"""
+        #新建优惠券
+        preConditionForTest().TestMysqlCoupon()
+        #新建红包
+        preConditionForTest().createNewRedGift()
+        #取消客服所有订单
+        #preConditionForTest().cancleOrderFromSQL()
+        print('新建优惠券5元,新建红包10元,发放达豆数量1000，取消客服所有订单')
 
     def test_001(self):
         """满减活动,满50减10"""
